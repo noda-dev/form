@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Stopwatch from './components/Stopwatch';
+import SimpleForm from './components/SimpleForm';
 
 type Props = {}
 
@@ -16,7 +16,7 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Stopwatch/>
+        <SimpleForm/>
       </div>
     )
   }
