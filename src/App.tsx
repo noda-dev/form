@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SimpleForm from './components/SimpleForm';
+import NumberForm from './components/NumberForm';
 
 type Props = {}
 
@@ -16,7 +16,7 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <SimpleForm/>
+        <NumberForm/>
       </div>
     )
   }

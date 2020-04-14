@@ -6,7 +6,7 @@ type State = {
   value: string
 }
 
-class SimpleForm extends React.Component<Props, State> {
+class NumberForm extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
@@ -17,15 +17,15 @@ class SimpleForm extends React.Component<Props, State> {
 
   //React.ChangeEventという型に<HTMLInputElement>という型を渡している？
   doChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const newValue: string = e.target.value;
-    console.log(newValue);
+    const value: string = e.target.value;
+    const newValue: string = value.replace(/[^0-9]/g, '');
     this.setState({
       value: newValue
     })
   }
 
   doSubmit(e: React.FormEvent<HTMLFormElement>) {
-    window.alert(this.state.value);
+    window.alert(Number(this.state.value));
     e.preventDefault();
   }
 
@@ -40,4 +40,4 @@ class SimpleForm extends React.Component<Props, State> {
 
 }
 
-export default SimpleForm;
+export default NumberForm;
